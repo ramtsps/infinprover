@@ -147,9 +147,12 @@ const SearchTool = () => {
       })
       .catch((error) => {
         console.error("Error saving links:", error);
+        alert("Error saving links:", error.message);
       });
   };
-
+  const handleLoadPlagiarismDetector = () => {
+    window.open("https://plagiarismdetector.net/", "_blank");
+  };
   return (
     <div className="container">
       <div className="row">
@@ -188,6 +191,9 @@ const SearchTool = () => {
               Save
             </button>
           )}
+          <button className="butpla" onClick={handleLoadPlagiarismDetector}>
+            try on other way ...🚀
+          </button>
         </div>
         <div className="right-section col-sm-12 col-lg-6 col-md-6">
           <div className="container">
